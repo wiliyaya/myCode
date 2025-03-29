@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 选中的是div的第一个p元素——结构1 */
+        /* div>p:first-child {
+            color:red;
+        } */
+
+        /* 选中的是div的第一个p元素——结构2 */
+        div>p:first-child {
+            color:red;
+        }
+        
+        /* 选中的是div的后代p，且p的父级是谁无所谓，但必须是其父级的第一个元素——结构3 */
+        div p:first-child {
+            color:red;
+        }
+
+        /* 选中的是p，且p的父级是谁无所谓，但必须是其父级的第一个元素——结构4 */
+        /* 所有的第一个p都会 */
+        p:first-child {
+            color:red;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <!-- 结构1 -->
+    <!-- <div>
+        <p>张三 98</p>
+        <p>张四 88</p>
+        <p>张五 78</p>
+        <p>张六 75</p>
+    </div> -->
+
+    <!-- 结构2 -->
+    <!-- <div>
+        <span>张三 98</span>
+        <p>张四 88</p>
+        <p>张五 78</p>
+        <p>张六 75</p>
+    </div> -->
+
+    <!-- 结构3 -->
+    <div>
+        <marquee>
+            <p>张三 98</p>
+        </marquee>
+        <p>张四 88</p>
+        <p>张五 78</p>
+        <p>张六 75</p>
+    </div>
+</body>
+</html>

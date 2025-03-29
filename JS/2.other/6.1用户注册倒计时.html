@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <textarea name="" id="" cols="30" rows="10">
+    用户注册协议
+    顺序结构存储就是使用数组来存储，一般使用数组只适合表示完全二叉树，因为不是完全二叉树会有空间的浪费。而现实中使用中只有堆才会使用数组来存储。二叉树顺序存储在物理上是一个数组，在逻辑上是一颗二叉树。
+    请注意了了了了了了了了了了了了
+  </textarea>
+  <br>
+  <button class="btn" disabled>我已经阅读用户协议（60）</button>
+  <script>
+    //1.获取元素
+    const btn=document.querySelector('.btn')
+    //2.倒计时
+    let i=5
+    let n=setInterval(function(){
+      i--
+      btn.innerHTML=`我已经阅读用户协议（${i}）`  //注意button是双标签，用innerHTML获取而不是value
+      if(i===0){
+        clearInterval(n)//关闭定时器
+        //定时器停了，就可以开按钮
+        btn.disabled=false
+        btn.innerHTML='同意'
+      }
+    },1000)
+  </script>
+</body>
+</html>

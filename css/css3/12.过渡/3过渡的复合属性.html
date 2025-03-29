@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+     .outer {
+      width: 1000px;
+      height: 900px;
+      border: 1px solid black;
+    }
+    .outer:hover .inner {
+      width: 1000px;
+    }
+    .inner {
+      width: 200px;
+      height: 150px;
+      transition: linear 3s 0.5s all;
+      /* 数字的顺序一定要先是duration再是delay，而且delay可以不写 */
+    }
+
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner"></div>
+  </div>
+</body>
+</html>

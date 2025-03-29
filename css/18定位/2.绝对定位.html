@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 1.如何设置绝对定位 */
+        /* 1.1给元素设置position:absolute 即可实现绝对定位 */
+        /* 1.2 可以使用left，right，top，bottom调整 */
+        /* 2.绝对定位的参考点：参考它的包含块 */
+        /* 包含块：（1）对于没有脱离文档流的元素：包含块就是父元素 */
+        /* （2）对于脱离文档流的元素：包含块就是第一个拥有定位属性的祖先元素（如果所有祖先都没定位，那包含块就是整个页面 */
+        /* 3.绝对定位元素的特点： */
+        /* 1.脱离文档流，会对后面兄弟元素，父元素有影响 */
+        /* 2.left和right不能一起设置，top和bottom不能一起设置 */
+        /* 3.绝对定位，浮动不能同时设置，如果同时设置，浮动失效，一定位为准 */
+        /* 4.绝对定位的元素，也能通过margin调整位置，但不推荐这样做 */
+        /* 5.无论什么元素（行内，行内块，块）设置为绝对定位后，都变成了定位元素） */
+        /* 定位元素：默认宽，高都被内容撑开，且能自由设置宽高 */
+        .outer {
+            width:500px;
+            background-color: skyblue;
+            border:1px solid black;
+        }
+        .box {
+            width:200px;
+            height:200px;
+        }
+        .box1 {
+            background-color: #888;
+        }
+        .box2 {
+            background-color: orange;
+            position:absolute;
+            top:220px;
+            left: 200px;
+        }
+        .box3 {
+            background-color: green;
+        }
+        </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>

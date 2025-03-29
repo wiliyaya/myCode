@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<body>
+  <!-- html5中推出的data-自定义属性 -->
+   <!-- 在标签上一律以data-开头 -->
+    <!-- 在DOM对象上一律以dataset开头 -->
+  <div class="box" data-id="10">It's a box.</div>
+<script>
+  const box=document.querySelector('.box')
+  console.log(box.dataset.id)
+</script>
+</body>
+</html>

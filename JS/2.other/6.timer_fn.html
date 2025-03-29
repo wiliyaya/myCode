@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>timer</title>
+</head>
+<body>
+  <script>
+    // 开启定时器函数
+    // 写法一
+    // setInterval(函数（匿名函数），间隔时间（单位为毫秒）)
+    // setInterval(function(){
+      //   console.log('one time a time')
+      // },1000)
+      // 写法二
+      function fn() {
+        console.log('one time a second')
+      }
+    // setInterval(函数名，间隔时间（单位为毫秒）)  注意函数名不要加小括号
+    let n=setInterval(fn,1000)
+    // let n=setInterval('fn()',1000) 还是别这么写
+    // 定时器函数返回的是一个id数字
+    console.log(n)
+    //关闭定时器 clearInterval(变量名)
+    clearInterval(n)
+
+  </script>
+</body>
+</html>

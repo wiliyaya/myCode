@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let obj={
+      //属性
+      //属性是无序的
+      //多个属性用逗号隔开
+      // 属性名和值用:隔开
+      // 如果属性名称里含空格或'-',属性的名称用''引号括起
+      uname:'Alice',
+      uage:18,
+      'my-hobby':'football',
+
+      //方法
+      getnumber:function(x,y){
+        console.log(x+y)
+      }
+    }
+    // 方法调用：对象名.方法名
+    obj.getnumber(1,2)
+    //常用的document.write('123') 就是一个对象名.方法名
+
+    //访问对象的属性的两种方法
+    // 第一种 对象名.属性名
+    console.log(obj.uname)
+    // 第二种 对象名['属性名'] 注意[]里面一定要加''
+    console.log(obj['uname'])
+
+    //对象添加新的数据 对象名.新属性名=新值
+    obj.ugrade=90
+    
+
+    //重新赋值 形式与添加数据一样 对象.属性=值
+    obj.uage=20
+    console.log(obj)
+
+    //删除 delete 对象名.属性名
+
+    //遍历对象 for in
+    // k是一个变量，在循环中依次代表对象的属性名
+    // 由于k是变量，所以必须使用[]语法解析
+    // 一定记住：k是获得对象的属性名，对象名[k]是获得属性值
+    for(let K in obj){
+      console.log(k)
+      console.log(obj[k])
+    }
+    //内置对象（略）
+  </script>
+</body>
+</html>

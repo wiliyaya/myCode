@@ -1,0 +1,168 @@
+/* 基础布局 */
+.container {
+    width: 1190px;
+    margin-left: 365px;
+}
+.leftfix {
+    float:left;
+}
+.rightfix {
+    float:right;
+}
+.clear::after {
+    content:"";
+    display:block;
+    clear:both;
+}
+/* #region顶部导航条start */
+.topbar .container {
+    height:30px;
+    color:#666;
+    background-color: #ECECEC;
+    font-size: 0;
+    line-height: 30px;
+}
+/* #region左侧start */
+.welcome span,.welcome a  {
+    font-size: 12px;
+}
+.hello {
+    padding-right: 28px;
+}
+.login {
+    padding-right: 10px;
+    border-right: 1px solid black;
+}
+.register {
+    padding-left: 10px;
+}
+/* #endregion左侧end */
+/* #region右侧 */
+.topbar_nav a {
+    font-size: 12px;
+    padding: 0 15px ;
+    border-right: 1px solid black;
+}
+.topbar_nav a:last-child {
+    padding-right: 0;
+    border: 0;
+}
+
+/* #endregion右侧 */
+/* #endregion顶部导航条 */
+
+/* #region头部start */
+.header .container {
+    height:120px;
+    font-size: 0;
+}
+.header .search form {
+    margin-top: 42px;
+}
+.header .search input {
+    height:34px;
+    width:508px;
+    border:1px solid #DD302D;
+}
+.header .search button {
+    height:36px;
+    width:80px;
+    background-color: #DD302D;
+    border:0;
+    vertical-align: top;
+    background-image: url('../../images/assets/serch_icon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+} 
+
+
+/* #endregion头部end */
+
+/* #region主导航start */
+.main-nav {
+    border-bottom: 1.1px #DD302D solid;
+}
+.main-nav .container {
+    font-size: 16px;
+}
+.main-nav .container .all-types {
+    height:48px;
+    width: 190px;
+    background-color: #DD302D;
+    color: #FFF;
+    line-height: 48px;
+    text-align: center;
+}
+.main-nav .container li {
+    float:left;
+    line-height: 48px;
+    margin:0 10px;
+}
+/* #endregion主导航end */
+
+/* #region内容区侧边导航start */
+.main-content .container {
+    margin-top: 10px;
+}
+.main-content .container .slide-nav {
+    width: 190px;
+    height: 458px;
+    background-color: #f4f4f4;
+}
+.main-content .container .slide-nav li {
+    height:28px;
+    color:#333;
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 28px;
+}
+.main-content .container .slide-nav li:hover a {
+    color:#DD302D;
+}
+.main-content .container .slide-nav  {
+  overflow: hidden;   
+  position: relative;
+}
+.main-content .container .slide-nav  li:first-child {
+    margin-top: 5px;   
+}
+
+.main-content .container .slide-nav li a:first-child {
+    padding-left: 16px;
+}
+/* #endregion内容区侧边导航end */
+
+/*#region home-hover*/
+.home-hover {
+    width: 700px;
+    height: 458px;
+    background-color: skyblue;
+    position: absolute;
+    top:0;
+    left: 190px; 
+    /* display: none;*/
+}
+/* .main-content .container .slide-nav .home-hover dl dt,dd {
+    float:left;
+} */
+
+/*#endregion home-hover*/
+
+/* #region picture-start */
+.main-content .container .center-picture {
+    width: 690px;
+    height: 458px;
+    background-color: aquamarine;
+    margin:0 10px;
+}
+/* #endregion picture-end */
+
+/* #region 右侧导航区 */
+.main-content .container .other-slide {
+    width: 290px;
+    height:458px;
+    background-color: #DD302D;
+}
+/* #endregion  */
+
+

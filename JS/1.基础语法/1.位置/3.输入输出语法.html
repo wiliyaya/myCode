@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 1.文档输出内容
+    // (1)document
+    // 作用：向body内输出内容
+    // 注意：如果输出的内容写的是标签，也会被解析成网页元素
+    // 输入一定要加引号
+    document.write('hello')
+    document.write("<h1>我是h1</h1>")
+
+    // (2)alert
+    // 作用：页面弹出警告对话框
+    alert("welcome,gay")
+    // 内部有引号：用反斜杠\转义
+    alert('It\'s a \"test\"');  // 输出：It's a "test"
+    alert("He said, \"Hello!\""); // 输出：He said, "Hello!"
+
+    // (3)console.log
+    // 作用：控制台输出语法，程序员调试使用
+    console.log('看看对不对')
+
+    // 2.文档输出内容
+
+    // (1)prompt
+    // 作用：显示一个对话框，对话框中包含一条文字信息，用来提醒用户输入名字
+    prompt('请输入您的姓名')
+
+    // 执行顺序：
+    // 1.一般的都按html文档流顺序执行
+    // 2.alert()和prompt()它们会跳过页面渲染先被执行
+
+    // 字面量：
+    // 1. 1000是数字字面量
+    // 2. 'hello' 是字符串字面量
+    // 3.[] 数组字面量 ; {} 对象字面量
+
+
+  </script>
+</body>
+</html>

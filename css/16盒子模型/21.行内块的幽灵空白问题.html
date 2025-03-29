@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 产生原因：行内块元素与文本基线对齐，而文本基线与文本最底端之间有一定距离 */
+        /* 解决方案： */
+        /* 1.给行内块元素设置vertical-align，值不为baseline即可，设置为middle，bottom，top均可 */
+        /* 2.若父元素中只有一张图片，设置img为display:block; */
+        /* 3.给父元素设置font-size:0;如果该行内块内部还有文本，则需单独设置font-size */
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

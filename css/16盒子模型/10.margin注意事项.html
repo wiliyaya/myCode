@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .outer {
+            width:100px;
+            height:400px;
+            padding:50px;
+            background-color: gray;
+        }
+        .inner {
+            width:100px;
+            height:100px;
+            margin:10px;
+            background-color: orange;
+        }
+
+        #d1 {
+            width:400px;
+            height:100px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 子元素的margin是参考父元素的content计算的 -->
+    <div class="outer">
+        Lorem ipsum dolor sit
+        <div class="inner">hhhhhhhhhh</div> 
+        amet consectetur, adipisicing elit. Omnis, autem.</div>
+        <!-- 上margin、左margin会影响自身的位置，下margin、右margin会影响相邻元素的位置 -->
+         <!-- 对于行内元素来说，左右的margin是可以完美设置的，上下的margin设置后是无效的 -->
+
+         <!-- margin的值也可以是auto，给一个块级元素左右设置auto可以实现该元素在其父元素内水平居中 -->
+         <div id="d1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nemo quae sint debitis exercitationem architecto placeat optio cumque quos labore magnam excepturi rem harum esse, eos perferendis autem doloremque repellendus!</div>
+
+         <!-- margin的值可以为负的（会覆盖上面的） -->
+</body>
+</html>

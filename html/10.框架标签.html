@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>框架标签</title>
+    </head>
+    <body>
+        <!-- 利用iframe嵌入一个网页 -->
+        <!-- <iframe src="https://www.bilibili.com" width="900" height="300" frameborder="0"></iframe> -->
+
+        <!-- 利用iframe嵌入其他内容 -->
+        <!-- <iframe src="./path_test/a/SB.jpg" frameborder="0"></iframe> -->
+
+        <a href="https://www.bilibili.com" target="bb">去B站</a><br>
+        <a href="https://taobao.com" target="bb">去淘宝</a>
+        <iframe name="bb" frameborder="0" width="300" height="500"></iframe>
+
+        <!-- 与表单的terget属性配合使用 -->
+        <form action="https://so.taobao.com/search" target="bb">
+            <input type="text" name="keyword">
+            <input type="submit" name="搜索">
+
+        </form>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 选中div的p元素，但排除类名为class1的 */
+        /* div>p:not(.class1) {
+            color:red;
+        } */
+
+        /* 排除title以“加油”开头的 */
+        div>p:not([title^="加油"]) {
+            color:red;
+        }
+
+        /* 排除括号内的类 */
+        div>p:not(:first-child) {
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>测试</span>
+        <p>张三 98</p>
+        <p>张四 88</p>
+        <p>张五 78</p>
+        <p>张六 75</p>
+        <p class="class1" title="加油老七">张八 60</p>
+        <p class="class1" title="加油老八">张七 60</p>
+    </div>
+</body>
+</html>

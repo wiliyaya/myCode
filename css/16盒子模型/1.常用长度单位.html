@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        html {
+            font-size:40px;
+        }
+        #d1 {
+            /* 第一种长度单位：px（像素） */
+            width:200px;
+            height:200px;
+            font-size:20px;
+            background-color: skyblue;
+        }
+        #d2 {
+            /* 第二种长度单位：em（相对于当前元素或其父级的font-size的倍数） */
+            width:10em;
+            height:10em;
+            font-size:20px;
+            /* 如果没有写则会去继承父级元素的font-size */
+            background-color: skyblue;
+        }
+        #d3 {
+            /* 第三种长度单位：rem（相对于根元素的font-size的倍数） */
+            width:10rem;
+            height:10rem;
+            font-size:20px;
+            background-color: skyblue;
+        }
+        #d4 {
+            width:200px;
+            height:200px;
+            font-size:20px;
+            background-color: skyblue;
+        }
+        .inside {
+            /* 第四种：%（相对其父级元素的百分比） */
+            width:50%;
+            height:50%;
+            font-size:20px;
+            background-color: orange;
+        }
+        .text {
+            font-size: 20px;
+            text-indent:2em;/*缩进*/
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">hhhhhhhh</div>
+    <hr>
+    <div id="d2">hhhhhhhh</div>
+    <hr>
+    <div id="d3">hhhhhhhh</div>
+    <hr>
+    <div id="d4">
+        <div class="inside">hhhhhhhh</div>
+    </div>
+    <hr>
+    <div class="text">
+        哈哈哈哈
+    </div>
+</body>
+</html>

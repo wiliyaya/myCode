@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+
+<body>
+    <form action="https://search.jd.com/search">
+
+        <fieldset>
+            <legend>main Info</legend>
+            <!--文本输入框-->
+            account:<input type="text" name="account" value="zhangsan" maxlength="10"><br>
+            <!--value代表默认值-->
+
+            <!--label-->
+            <!-- 
+                <label for="account">account:</label>
+                <input id="account" type="text" name="account" value="zhangsan" maxlength="10"><br>
+                for与id相连 
+                -->
+
+            第二种方法
+            <label>
+                password:
+                <input type="password" name="pwd" maxlength="10"><br>
+            </label>
+
+
+
+            <!--禁用表单控件-->
+            show:<input disabled type="text" name="account" value="zhangsan" maxlength="10"><br>
+
+            <!--密码输入框-->
+            <!-- password:<input type="password" name="pwd" maxlength="10"><br> -->
+
+            <!--单选框-->
+            gender:
+            <input id="man" type="radio" name="gender" value="male">
+            <label for="man">male</label>
+            <label>
+                <input type="radio" name="gender" value="female" checked>female<!--checked代表默认勾选-->
+            </label>
+            <br>
+        </fieldset>
+
+        <fieldset>
+            <legend>subordinary Info</legend>
+
+            <!--多选框-->
+            hobby:
+            <input type="checkbox" name="hobby" value="dancing">dancing
+            <input type="checkbox" name="hobby" value="singing">singing
+            <input type="checkbox" name="hobby" value="drawing">drawing
+
+            <br>
+            其他：
+            <textarea name="other" cols="20" rows="10"></textarea>
+
+            籍贯：
+            <select name="palce">
+                <option value="one">1</option>
+                <option value="two">2</option>
+                <option value="three" selected>3</option>
+            </select>
+        </fieldset>
+
+        <!--隐藏域-->
+        <input type="hidden" name="from" value="what">
+        <!--name主要还是和后端沟通-->
+
+        <br>
+        <!--确认按钮的第一种写法-->
+        <button type="submit">confirmed</button>
+        <!-- 确认按钮的第二种写法 -->
+        <!-- <input type="submit" value="comfirmed"> -->
+        <!-- 不写name -->
+
+        <!-- 重置按钮_第一种写法 -->
+        <button type="reset">reset</button>
+        <!-- 第二种 -->
+        <!-- <input type="reset" value="reset"> -->
+
+        <!-- 普通按钮（除了确认和重置功能的按钮） -->
+        <button type="button">普通按钮</button>
+        <!-- <input type="button" value="普通按钮"> -->
+
+
+    </form>
+</body>
+
+</html>

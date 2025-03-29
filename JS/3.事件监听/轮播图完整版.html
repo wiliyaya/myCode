@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      font-size: 0;
+    }
+    .slider {
+      height: 1000px;
+      width: 800px;
+      /* background-image: url('./image/1.jpg'); */
+      background-size: cover;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+    }
+    .title {
+      height: 200px;
+      background-color: skyblue;
+      margin-bottom: -100px;
+    }
+    img {
+      width: 800px;
+      height: 800px;
+    }
+    .sliver-footer {
+      font-size: 30px;
+      background-color: skyblue;
+    }
+    /* .slider-indicator {
+      display: flex;
+    } */
+  </style>
+</head>
+<body>
+  <!-- <div class="outer">
+    <div >
+      <button class="left"><</button>
+      <button class="next">></button>
+    </div>
+    <div class="title">
+      love me ,girl
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </div> -->
+
+  <div class="slider">
+    <div class="slider-wrapper">
+      <img src="./image/1.jpg" alt="">
+    </div>
+    <div class="sliver-footer">
+      <p>love me ,girl</p>
+      <ul class="slider-indicator">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="toggle">
+        <button class="prev">&lt</button>
+        <button class="next">&gt</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const data=[
+      {url:"./image/1.jpg",title :'love me ,girl', color:'rgb(100,67,68)'},
+      {url:"./image/2.jpg",title :'DMBJ' ,color:'rgb(43,35,26)'},
+      {url:"./image/3.jpg",title :'love me ,girl', color:'rgb(44,55,66)'},
+      {url:"./image/4.jpg",title :'love me ,girl', color:'rgb(122,125,45)'},
+  ]
+
+  // 获取元素
+  const img=document.querySelector('.slider-wrapper img')
+  const p=document.querySelector('.sliver-footer p')
+  const color=document.querySelector('.sliver-footer ')
+  // 1.右键按钮
+  // 1.1获取右侧按钮
+  const next=document.querySelector('.next')
+  let i=0 //信号量 控制图片播放张数
+  //1.2 注册点击事件
+  next.addEventListener('click',function(){
+    i++
+    if(i===data.length){
+      i=0
+    }
+
+    toggle()
+  })
+
+  // 2.左侧
+  const prev=document.querySelector('.prev')
+  prev.addEventListener('click',function(){
+    i--
+    if(i<0){
+      i=data.length-1
+    }
+    toggle()
+  })
+
+  function toggle() {
+    img.src=data[i].url
+    p.innerHTML=data[i].title
+    color.style.backgroundColor=data[i].color
+    //1.5 更换小圆点 先移除原来的类名，当前的li再添加这个类名
+    document.querySelector('.slider-indicator .active').classList.remove('active')//这个active还没写
+    document.querySelector(`.slider-indicator li:nth()-child(${i+1})`).classList.add('active')
+  }
+
+  //3.自动播放模块
+  let timerID=setInterval(function(){
+    //利用js自动调用点击事件 click() 一定加小括号调用函数
+    next.click()
+  },1000)
+
+  //4.鼠标经过大盒子时停止定时器
+  const slider=document.querySelector('.slider')
+  //注册事件
+  slider.addEventListener('mouseenter',function(){
+    //停止定时器
+    clearInterval(timerID)
+  })
+  //5.鼠标离开大盒子时开启定时器
+  //注册事件
+  slider.addEventListener('mouseleave',function(){
+    //删除之前残留的定时器
+    clearInterval(timerID) //注意有了名字才能关
+    //开启定时器
+    timerID=setInterval(function(){
+    //利用js自动调用点击事件 click() 一定加小括号调用函数
+    next.click()
+  },1000)
+  })
+    </script>
+</body>
+</html>

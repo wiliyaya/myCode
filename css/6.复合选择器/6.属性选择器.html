@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 第一种：选中具有title属性的元素（不用管title的值） */
+        /* [title] {
+            color:red;
+        } */
+
+        /* 第二种 */
+        [title="title2"] {
+            color:gold;
+        }
+
+        /* 第三种:选中以t开头的title */
+        [title^="t"] {
+            color:green;
+        }
+
+        /* 第四种：选中以 结尾的title */
+        [title$="3"] {
+            color:brown;
+        }
+
+        /* 第五种：选中title中包含字母e的元素 */
+        [title*="e"] {
+            color:violet;
+        }
+        
+    </style>
+</head>
+<body>
+    <div title="title1">标题1</div>
+    <div title="title2">标题3</div>
+    <div title="title3">标题2</div>
+    <div title="title4">标题4</div>
+    
+</body>
+</html>

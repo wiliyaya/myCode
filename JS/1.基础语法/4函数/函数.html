@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 封装函数
+    // 给一个函数的默认参数
+    // function getArrSum(arr=[]) {
+    //   let sum=0
+    //   for(let i=0;i<arr.length();i++){
+    //     sum+=arr[i]
+    //   }
+    //   console.log(sum)
+    // }
+    // // 调用函数
+    // getArrSum([1,2,3])
+
+    function getSum(n=0,m=0){
+      let sum=0
+      for(let i=n;i<=m;i++){
+        sum+=i;
+      }
+      console.log(sum)
+    }
+    let num1= +prompt('请输入起始值')
+    let num2= +prompt(`请输入结束值`)
+    // 调用函数
+    getSum(num1,num2)
+
+  </script>
+</body>
+</html>

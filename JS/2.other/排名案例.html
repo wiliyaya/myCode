@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 800px;
+      height: 500px;
+      background-color: red;
+      color: white;
+      /* display: flex; */
+    }
+    .box1 {
+      margin:0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>今天吃什么</h2>
+    <div class="box1 one">第一推荐：</div>
+    <div class="box1 two">第二推荐：</div>
+    <div class="box1 three">第三推荐：</div>
+  </div>
+  <script>
+    const Food=['糖水','火锅','烧烤','炸鸡','寿司','奶茶','烤冷面','鸡蛋灌饼','泡面','蛋糕','吃食堂','麦片','章鱼丸子']
+    let num1=Math.floor(Math.random()*Food.length)
+    let num2=Math.floor(Math.random()*(Food.length-1))
+    let num3=Math.floor(Math.random()*(Food.length-2))
+    const one=document.querySelector('.one')
+    one.innerHTML=`第一推荐：${Food[num1]}`
+    Food.splice(num1,1)
+    const two=document.querySelector('.two')
+    two.innerHTML=`第二推荐：${Food[num2]}`
+    Food.splice(num2,1)
+    const three=document.querySelector('.three')
+    three.innerHTML=`第三推荐：${Food[num3]}`
+    Food.splice(num3,1)
+  </script>
+</body>
+</html>

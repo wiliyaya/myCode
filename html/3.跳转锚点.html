@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>超链接_跳转锚点</title>
+    </head>
+    <body>
+        <a href="#DB">DMBJ</a>
+        <!--记得加'#' -->
+        <a href="#urSB">SB</a>
+
+        <p>这是芙莉莲的照片</p>
+        <img src="./fll.jpg" alt="芙莉莲">
+
+
+        <p id="urSB">This is insult you</p>
+        <!--推荐用id的命名方式-->
+        <!--注意不要用数字开头来命名-->
+        <img src="./path_test/a/SB.jpg" alt="SB">
+
+        <a name="DB"></a>
+        <!--用a标签配合name属性，在这里设置锚点-->
+        <!--锚点的名称不能重复，且区分大小写-->
+        <p>DMBJ is adorable</p>
+        <img src="./path_test/DMBJ.jpg" alt="DMBJ">
+
+        <p>整体介绍完毕了</p>
+        <a href="#">回到顶部</a>
+        <a href="">刷新页面</a>
+        <!--描点还可以在其他页面跳转（请看 跳转.html）-->
+
+        <!--还可以有js脚本(写在：；之间)-->
+        <a href="javascript:alert(666);">点我弹窗</a>
+    </body>
+</html>

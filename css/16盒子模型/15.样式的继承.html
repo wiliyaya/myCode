@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 可继承：字体属性、文本属性（vertical-align除外）、文字颜色等 */
+        /* 
+            布局：边框、背景、内边距、宽高、溢出方式
+            简单来说，就是跟盒子模型相关的
+         */
+        #d1 {
+            height:600px;
+            background-color: gray;
+            padding: 50px;
+            font-size: 50px;
+        }
+        #d2 {
+            height:400px;
+            background-color: orange;
+            padding:20px;
+            color:burlywood;
+            font-weight: bold;
+        }
+        #d3 {
+            height:200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">
+        <div id="d2">
+            <div id="d3">hhhhhhh</div>
+        </div>
+    </div>
+</body>
+</html>

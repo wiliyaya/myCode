@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* 空白产生原因：行内元素，行内块元素彼此之间的换行会被浏览器解析为一个空白 */
+        /* 解决方案： */
+        /* 给父元素设置font-size:0; ，再给需要显示的文字的元素单独设置字体大小 */
+        img {
+            height:110px;
+            border:5px solid black;
+        }
+        .s1 {
+            background-color: red;
+        }
+        .s2 {
+            background-color: palegreen;
+        }
+        .s3 {
+            background-color: aqua;
+        }
+        div {
+            font-size: 0px;
+        }
+        span {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span class="s1">ssss1</span>
+        <span class="s2">ssss1</span>
+        <span class="s3">ssss1</span>
+        <hr>
+        <img src="../images/SB.jpg">
+        <img src="../images/SB.jpg">
+        <img src="../images/SB.jpg">
+    </div>
+</body>
+</html>

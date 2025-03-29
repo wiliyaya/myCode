@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">SSSSSBBBBB</div>
+  <script>
+    // 1.获取元素
+    const box=document.querySelector('div')
+    // 2.修改文字内容 对象.innerText 属性
+    // console.log(box.innerText)//获取文字内容
+    // console.log(box)
+    // box.innerText='<strong>wssb</strong>'//不解析标签
+    box.innerHTML='<strong>wssb</strong>'//能识别文本和解析标签
+
+  </script>
+</body>
+</html>

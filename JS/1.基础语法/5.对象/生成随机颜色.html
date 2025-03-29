@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      height: 200px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div>1</div>
+  <script>
+    // 1.自定义一个随机色函数
+    function getRandomColor(flag){
+      if(flag){
+        // 如果是true，就返回#ffffff
+        let str='#'
+        let arr=['0','1','2','3','4','5','6','7','8','9','a',
+        'b','c','d','e','f']
+        // 利用for循环连续抽取六次，把结果加到str里
+        for(let i=0;i<6;i++){
+          let num=Math.floor(Math.random()*arr.length);
+          str+=arr[num]
+        }
+        return str
+      }
+      else {
+        let r=Math.floor(Math.random()*256)
+        let g=Math.floor(Math.random()*256)
+        let b=Math.floor(Math.random()*256)
+        let a=Math.random()
+        return `rgb(${r},${g},${b},${a})`
+      }
+    }
+      const div=document.querySelector('div')
+      div.style.backgroundColor=getRandomColor()
+  </script>
+</body>
+</html>

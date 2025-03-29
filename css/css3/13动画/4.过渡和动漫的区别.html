@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    .outer {
+      width: 1000px;
+      height: 200px;
+      border:1px solid black;
+    }
+    .inner {
+      width: 100px;
+      height: 100px;
+    }
+    /* 用过渡实现inner1跑到右边 */
+    .inner1 {
+      background-color: orange;
+      transition:3s linear;
+    }
+    .outer:hover .inner1 {
+      transform: translate(900px);
+    }
+    /* 用动画实现 */
+    /* 动画可以实现更多的细节 */
+    .inner2 {
+      background-color: green;
+      animation:go 3s linear forwards;
+    }
+    @keyframes go {
+      0%{
+      }
+      100%{
+        transform: translate(900px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="outer">
+    <div class="inner inner1"></div>
+    <div class="inner inner2"></div>
+  </div>
+</body>
+</html>

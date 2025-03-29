@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* margin塌陷：第一个子元素的上margin会占用在父元素上，最后一个子元素的下margin会作用在父元素上 */
+
+        .outer {
+            width:400px;
+            height:300px;
+            background-color: gray;
+            /* inner1、2里问题的解决方案： */
+            /* 第一类：加border或加padding，缺点是盒子面积增大，占内存 */
+            /* border:10px solid transparent; */
+            /* padding:10px; */
+            /* 第二类： */
+            overflow:hidden;
+        }
+        .inner1 {
+            width:100px;
+            height:100px;
+            background-color: orange;
+            /* 下面这行代码是有问题的 */
+            margin-top:50px;
+        }
+        .inner2 {
+            width:100px;
+            height:100px;
+            background-color: orangered;
+            /* 下面这行代码是有问题的 */
+            margin-bottom:50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner1">hhhhhhh1</div>
+        <div class="inner2">hhhhhhh2</div>
+
+    </div>
+</body>
+</html>
