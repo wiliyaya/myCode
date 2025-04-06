@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    * {
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    //实例化
+    //1.得到当前时间
+    // const date=new Date()
+    // console.log(date)
+    //2.指定时间
+    // const date1=new Date('2025-5-1 08:09:00')
+    // console.log(date1)
+
+    //获得日期对象
+    const date=new Date()
+    //使用里面的方法
+    // console.log(data.getFullYear())
+    // console.log(data.getMonth()+1)  //注意getMonth()的范围在0~11，使用时记得加上一
+    // console.log(date.getDate()) 
+    // console.log(data.getDay())  //返回的是星期几，其中星期天是0
+    // console.log(date.getHours())
+    
+    const year=date.getFullYear()
+    let month=(date.getMonth()+1<10) ? '0'+(date.getMonth()+1) :date.getMonth()+1
+    let date1=(date.getDate()<10) ? '0'+date.getDate() :date.getDate()
+    document.write(`${year}-${month}-${date1}`)
+    console.log(date1)
+    
+    
+  </script>
+</body>
+</html>

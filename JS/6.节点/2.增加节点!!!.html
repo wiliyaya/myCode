@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <ul></ul>
+  <script>
+    //1.创建节点
+    // const div=document.createElement('div')
+    //2.追加节点  作为最后一个子元素
+    // document.body.appendChild(div)
+    const ul=document.querySelector('ul')
+    const li=document.createElement('li')
+    li.innerHTML='I\'m li'
+    // ul.appendChild(li)
+    //3.追加节点 二
+    //insertBefore(插入的元素，放到哪个元素的前面)  insertBefore(我是谁，我在哪)
+    ul.insertBefore(li,ul.children[0])  //变量不加引号
+  </script>
+</body>
+</html>

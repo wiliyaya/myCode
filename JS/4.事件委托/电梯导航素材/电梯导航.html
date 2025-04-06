@@ -1247,16 +1247,67 @@
     
     //第二第三都放到另一个执行函数里
   (function(){
-    //点击页面可以滑动
+    //2.点击页面可以滑动
     const list=document.querySelector('.xtx-elevator-list')
     list.addEventListener('click',function(e){
-      if(e.target.tagName==='A'){
+      if(e.target.tagName==='A' && e.target.dataset.name){
         //排他思想
         //先移除原来的类active
-        document.querySelector('.xtx-elevator-list .active').classList.remove('active')
-        document.documentElement.scrollTop=e.scrollTop
+        // 由于刚开始什么也没点的时候没有盒子带光标，所以不能像下一行那样写
+        // document.querySelector('.xtx-elevator-list .active').classList.remove('active')
+        
+        //先获取一个类名
+        const old =document.querySelector('.xtx-elevator-list .active')
+        //如果为null 会判假
+        if(old){
+          old.classList.remove('active')
+        }
+        e.target.classList.add('active')
+        //获得自定义属性
+        // console.log(e.target.dataset.name)
+        // 根据小盒子的自定义属性 去选择对应的大盒子
+        // console.log(document.querySelector(`.xtx_goods_${e.target.dataset.name}`).offsetTop)
+        // 获得对应大盒子的offsetTop
+        const top=document.querySelector(`.xtx_goods_${e.target.dataset.name}`).offsetTop
+        //让页面滚动到对应位置
+        document.documentElement.scrollTop=top 
+        //有一个问题，就是要怎么才能有过渡效果？
+        /* 页面滑动 */
+        // html {
+        //   scroll-behavior:smooth;
+        // }
       }
     })
+    
+    //页面滚动，可以根据大盒子选小盒子 添加active类
+    window.addEventListener('scroll',function(){
+      // 3.1先移除active 类
+      //先获取一个类名
+      const old =document.querySelector('.xtx-elevator-list .active')
+        //如果为null 会判假
+        if(old){
+          old.classList.remove('active')
+        }
+        //判断页面当前滑动的位置，选择小盒子
+
+        // 获取4个大盒子
+        const news=document.querySelector('.xtx_goods_new')
+        const popular=document.querySelector('.xtx_goods_popular')
+        const brand=document.querySelector('.xtx_goods_brand')
+        const topic=document.querySelector('.xtx_goods_topic')
+        const n=document.documentElement.scrollTop
+        if(n>=news.offsetTop&&n<popular.offsetTop){
+          document.querySelector('[data-name=new]').classList.add('active')
+        }
+        else if(n>=popular.offsetTop&&n<brand.offsetTop){
+          document.querySelector('[data-name=popular]').classList.add('active')
+        }
+        else if(n>=brand.offsetTop&&n<topic.offsetTop){
+          document.querySelector('[data-name=topic]').classList.add('active')
+        }
+        //中括号：属性选择器
+    })
+
   })();
 
 

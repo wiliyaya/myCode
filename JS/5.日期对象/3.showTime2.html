@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      height: 50px;
+      width: 550px;
+      font-size: 30px;
+      border: 1px solid deeppink;
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>现在是2025年3月30日21点59分</div>
+  <script>
+    const div=document.querySelector('div')
+    //得到日期对象
+    const date=new Date()
+    div.innerHTML=date.toLocaleString() //2025/3/30 22:26:11
+    //在定时器前面写两行可以防止刷新时卡住 显示的就是html里面的div的内容
+    setInterval(function(){
+      const date=new Date()
+    div.innerHTML=date.toLocaleString()
+    },1000)
+
+    // div.innerHTML=date.toLocaleDateString()  //2025/3/30 年月日
+    // div.innerHTML=date.toLocaleTimeString() //22:33:23 时分秒
+
+    //输出中文的星期几
+    const week=['星期天','星期一','星期二','星期三','星期四','星期五','星期六']
+    console.log(week[new Date().getDay()])
+    
+
+  </script>
+</body>
+</html>

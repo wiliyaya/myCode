@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+<body>
+  <ul>
+    <li>1</li>
+  </ul>
+  <script>
+    const ul=document.querySelector('ul')
+    //1.克隆节点 元素.cloneNode(true)
+    //这里是true 代表克隆时会包含后代节点一起克隆
+    //false 克隆时不包含后代节点
+    //默认为false
+    // const li1=ul.children[0].cloneNode(true)
+    //2.追加
+    // ul.appendChild(li1)
+    ul.appendChild(ul.children[0].cloneNode(true))
+  </script>
+</body>
+</html>

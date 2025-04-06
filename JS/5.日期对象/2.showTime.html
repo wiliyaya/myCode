@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    div {
+      height: 50px;
+      width: 550px;
+      font-size: 30px;
+      border: 1px solid deeppink;
+      line-height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div>现在是2025年3月30日21点59分</div>
+  <script>
+    const div=document.querySelector('div')
+    function addzero(n=0) {
+      if(n<10){
+        n='0'+n
+      }
+      return n
+    }
+
+    function gettime() {
+      //实例化
+      const date=new Date()
+      let h=addzero(date.getHours())
+      let m=addzero(date.getMinutes())
+      let s=addzero(date.getSeconds())
+
+      return `现在是${date.getFullYear()}年${date.getMonth()+1}月${date.getDate()}日${h}点${m}分${s}秒`
+    }
+    let timer=setInterval(function(){
+      div.innerHTML=gettime()
+    },1000)
+    
+  </script>
+</body>
+</html>
